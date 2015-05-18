@@ -3,6 +3,8 @@ Theme, color, terminal prompt settings.  It assumes that you are using Sublime t
 
 I customized the theme so that it would use theme colors from the terminal app itself instead of relying on colors declared in the theme.
 
+![settings screenshot](http://i.imgur.com/t2FZ55M.png?1)
+
 * install [oh-my-zsh example link](https://github.com/robbyrussell/oh-my-zsh)
 ```
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
