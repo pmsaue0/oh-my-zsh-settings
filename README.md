@@ -1,5 +1,5 @@
-# oh-my-zsh-settings
-Theme, color, terminal prompt settings.  It assumes that you are using Sublime text editor as your default editor, but you can change that if you want in .zshrc
+# oh-my-zsh-settings, HG prompt, GIT prompt, terminal colors
+Theme, color, terminal prompt settings.  It assumes that you are using Sublime text editor as your default editor, but you can change that if you want in .zshrc.  You will get textualized prompt for Mercurial and Git.
 
 I customized the theme so that it would use theme colors from the terminal app itself instead of relying on colors declared in the theme.
 
