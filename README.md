@@ -5,7 +5,7 @@ I customized the theme so that it would use theme colors from the terminal app i
 
 ![settings screenshot](http://i.imgur.com/t2FZ55M.png?1)
 
-( 1 ) install [oh-my-zsh example link](https://github.com/robbyrussell/oh-my-zsh)
+( 1 ) install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 ```
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 ```
