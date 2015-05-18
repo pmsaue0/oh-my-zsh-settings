@@ -10,7 +10,8 @@ I customized the theme so that it would use theme colors from the terminal app i
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 ```
 ( 2 ) cd to wherever you have cloned this oh-my-zsh-settings repo
-( 3 ) copy these files to your home dir with these commands
+
+( 3 ) copy the .zshrc and .zsh-theme files to your home dir with these commands
 ```
 cp ~/.zshrc ~/.zshrc.orig
 cp .zshrc ~
