@@ -1,4 +1,4 @@
-# Oh My Zsh settings
+# Oh My Zsh terminal settings
 ## Including HG prompt, GIT prompt, terminal colors
 I assume that you are using Sublime text editor as your default editor, but you can change that if you want in .zshrc.  You will also need to have Git and HG installed.  You will get textualized prompt for Mercurial and Git.
 
@@ -6,25 +6,25 @@ I customized the theme so that it would use theme colors from the terminal app i
 
 ![settings screenshot](http://i.imgur.com/t2FZ55M.png?1)
 
-* install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+* install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) with this:
 ```
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 ```
 
-* Install [hg-prompt](https://bitbucket.org/sjl/hg-prompt/src)  (Git prompt is installed automatically with oh-my-zsh)
+* Install [hg-prompt](https://bitbucket.org/sjl/hg-prompt/src) with this:
 ```
 hg clone http://bitbucket.org/sjl/hg-prompt/
 mkdir ~/bin
 mv hg-prompt ~/bin/hg-prompt
 ```
 
-* Modify `~/.hgrc` to include:
+* Modify `~/.hgrc` to include this:
 ```
 [extensions]
 prompt = ~/bin/hg-prompt/prompt.py
 ```
 
-* Copy the .zshrc and .zsh-theme files to your home dir with these commands:
+* Copy the `.zshrc` and `.zsh-theme` files to your home dir with these commands:
 ```
 git clone https://github.com/pmsaue0/oh-my-zsh-settings.git
 cp ~/.zshrc ~/.zshrc.orig
