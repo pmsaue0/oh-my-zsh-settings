@@ -1,7 +1,8 @@
-# HG prompt, GIT prompt, terminal colors
-Theme, color, terminal prompt settings.  It assumes that you are using Sublime text editor as your default editor, but you can change that if you want in .zshrc.  You will get textualized prompt for Mercurial and Git.
+# Oh My Zsh settings
+## Including HG prompt, GIT prompt, terminal colors
+I assume that you are using Sublime text editor as your default editor, but you can change that if you want in .zshrc.  You will get textualized prompt for Mercurial and Git.
 
-I customized the theme so that it would use theme colors from the terminal app itself instead of relying on colors declared in the theme.
+I customized the theme so that it would use theme colors from the terminal app itself instead of relying on specific colors declared in the theme.
 
 ![settings screenshot](http://i.imgur.com/t2FZ55M.png?1)
 
@@ -11,7 +12,7 @@ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | 
 ```
 ( 2 ) Clone or download my settings repo, then cd to wherever you have cloned this oh-my-zsh-settings repo
 
-( 3 ) copy the .zshrc and .zsh-theme files to your home dir with these commands
+( 3 ) copy the .zshrc and .zsh-theme files to your home dir with these commands:
 ```
 cp ~/.zshrc ~/.zshrc.orig
 cp .zshrc ~
@@ -21,4 +22,4 @@ cp 00-sunrise.zsh-theme ~/.oh-my-zsh/themes/00-sunrise.zsh-theme
 ```
 chsh -s /bin/zsh
 ```
-( 5 ) Go to the Terminal settings area and click the GEAR in the bottom left so that you can import the theme in this repo: royal-theme.terminal.  This will give you terminal colors based on the Solarized theme.
+( 5 ) Install terminal colors.  Go to the Terminal settings area and click the GEAR in the bottom left so that you can import the theme in this repo: royal-theme.terminal.  This will give you terminal colors based on the Solarized theme.
