@@ -1,0 +1,54 @@
+{
+	"caret_extra_width": 1,
+	"close_windows_when_empty": false,
+	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+	"copy_with_empty_selection": false,
+	"drag_text": false,
+	"draw_minimap_border": true,
+	"enable_tab_scrolling": false,
+	"file_exclude_patterns":
+	[
+		"*.scssc*",
+		"*.min*",
+		"*.gz",
+		"*.log"
+	],
+	"font_face": "Monaco",
+	"font_options":
+	[
+		"no_round"
+	],
+	"font_size": 15.0,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"match_brackets_content": false,
+	"match_selection": false,
+	"match_tags": false,
+	"open_files_in_new_window": false,
+	"overlay_scroll_bars": "enabled",
+	"preview_on_click": false,
+	"scroll_past_end": true,
+	"scroll_speed": 5.0,
+	"show_full_path": false,
+	"sidebar_default": true,
+	"spacegray_sidebar_font_large": true,
+	"spacegray_sidebar_tree_normal": true,
+	"spacegray_tabs_font_large": true,
+	"spacegray_tabs_large": true,
+	"tab_size": 2,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?_",
+	"word_wrap": true,
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "sprockets", "tmp"],
+  "file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db", "*.sublime-workspace"]
+}
