@@ -54,6 +54,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -96,7 +97,6 @@ alias hgd="hg status --rev . --rev tip"
 alias esstart="launchctl load /usr/local/opt/elasticsearch/homebrew.mxcl.elasticsearch.plist"
 alias esstop="launchctl unload /usr/local/opt/elasticsearch/homebrew.mxcl.elasticsearch.plist"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 # %{$Y%}‹
 function hg_prompt_info {
     hg prompt --angle-brackets "\
@@ -107,3 +107,5 @@ function hg_prompt_info {
 # %B sets bold text
 PROMPT='%{$KK%}------------------------------------------------------------%{$reset_color%}
 %B%0~ $(custom_git_prompt)$(hg_prompt_info)%B» %{$RESET%}'
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
