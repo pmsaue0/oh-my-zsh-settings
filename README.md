@@ -58,10 +58,10 @@ git clone https://github.com/pmsaue0/oh-my-zsh-settings.git
 cp ~/.zshrc ~/.zshrc.orig
 cp oh-my-zsh-settings/.zshrc ~
 cp oh-my-zsh-settings/00-sunrise.zsh-theme ~/.oh-my-zsh/themes/00-sunrise.zsh-theme
-cp QuadraatSMono-Bold.otf ~/Library/Fonts
-cp QuadraatSMono-BoldItalic.otf ~/Library/Fonts
-cp QuadraatSMono-Italic.otf ~/Library/Fonts
-cp QuadraatSMono-Regular.otf ~/Library/Fonts
+cp oh-my-zsh-settings/QuadraatSMono-Bold.otf ~/Library/Fonts
+cp oh-my-zsh-settings/QuadraatSMono-BoldItalic.otf ~/Library/Fonts
+cp oh-my-zsh-settings/QuadraatSMono-Italic.otf ~/Library/Fonts
+cp oh-my-zsh-settings/QuadraatSMono-Regular.otf ~/Library/Fonts
 ```
 
 * If you're not already in Zsh, you can use this command to change to it.
