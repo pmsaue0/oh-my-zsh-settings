@@ -6,11 +6,12 @@ I customized the theme so that it would use theme colors from the terminal app i
 
 ![settings screenshot](http://i.imgur.com/t2FZ55M.png?1)
 
+## Install oh-my-zsh
 * install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) with this:
 ```
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 ```
-
+## Mercurial stuff
 * Install [hg-prompt](https://bitbucket.org/sjl/hg-prompt/src) with this:
 ```
 hg clone http://bitbucket.org/sjl/hg-prompt/
@@ -23,7 +24,7 @@ mv hg-prompt ~/bin/hg-prompt
 [extensions]
 prompt = ~/bin/hg-prompt/prompt.py
 ```
-
+## Git stuff
 * Modify `~/.gitconfig` to include this:
 ```
 [alias]
@@ -52,12 +53,17 @@ prompt = ~/bin/hg-prompt/prompt.py
     la = "!git config -l | grep alias | cut -c 7-"
 ```
 
+## zsh settings and terminal styles
 * Copy the `.zshrc` and `.zsh-theme` files to your home dir with these commands:
 ```
 git clone https://github.com/pmsaue0/oh-my-zsh-settings.git
 cp ~/.zshrc ~/.zshrc.orig
 cp oh-my-zsh-settings/.zshrc ~
 cp oh-my-zsh-settings/00-sunrise.zsh-theme ~/.oh-my-zsh/themes/00-sunrise.zsh-theme
+```
+
+* Install fonts
+```
 cp oh-my-zsh-settings/QuadraatSMono-Bold.otf ~/Library/Fonts
 cp oh-my-zsh-settings/QuadraatSMono-BoldItalic.otf ~/Library/Fonts
 cp oh-my-zsh-settings/QuadraatSMono-Italic.otf ~/Library/Fonts
