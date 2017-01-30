@@ -8,6 +8,7 @@ G=$fg_no_bold[green]
 M=$fg_no_bold[magenta]
 Y=$fg_no_bold[yellow]
 B=$fg_no_bold[blue]
+W=$fg_no_bold[white]
 KK=$fg[black]
 RESET=$reset_color
 
@@ -66,7 +67,7 @@ PROMPT='%{$KK%}------------------------------------------------------------%{$re
 %B%0~ $(custom_git_prompt)%B» %{$RESET%}'
 RPS1="${return_code}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$Y%}‹git:"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$Y%}‹git:%{$W%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$Y%}›%{$RESET%} "
 
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$R%}*"
