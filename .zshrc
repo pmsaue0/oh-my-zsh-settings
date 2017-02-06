@@ -100,7 +100,7 @@ alias esstop="launchctl unload /usr/local/opt/elasticsearch/homebrew.mxcl.elasti
 # %{$Y%}‹
 function hg_prompt_info {
     hg prompt --angle-brackets "\
-<%{$Y%}‹hg:%{$B%}<branch>><%{$Y%}:<tags|, >>%{$Y%}›\
+<%{$Y%}‹hg:%{$W%}<branch>><%{$Y%}:<tags|, >>%{$Y%}›\
 %{$B%}<status|modified|unknown><update>\
 <patches: <patches|join( → )>> %{$reset_color%}" 2>/dev/null
 }
