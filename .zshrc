@@ -94,8 +94,6 @@ alias s='cd ~/Sites'
 alias ss='subl .'
 alias n="afplay -v 2 /System/Library/Sounds/Blow.aiff"
 alias hgd="hg status --rev . --rev tip"
-alias esstart="launchctl load /usr/local/opt/elasticsearch/homebrew.mxcl.elasticsearch.plist"
-alias esstop="launchctl unload /usr/local/opt/elasticsearch/homebrew.mxcl.elasticsearch.plist"
 
 # %{$Y%}‹
 function hg_prompt_info {
@@ -107,8 +105,11 @@ function hg_prompt_info {
 # %B sets bold text
 PROMPT='%{$KK%}------------------------------------------------------------%{$reset_color%}
 %B%0~ $(custom_git_prompt)$(hg_prompt_info)%B» %{$RESET%}'
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 
 export NVM_DIR="/Users/r620187/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
