@@ -39,6 +39,8 @@ prompt = ~/bin/hg-prompt/prompt.py
     cam = commit -a -m
     m = commit --amend --verbose
 
+    tug = pull --rebase
+
     d = diff
     ds = diff --stat
     dc = diff --cached
