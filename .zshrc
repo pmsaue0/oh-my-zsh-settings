@@ -47,8 +47,8 @@ ZSH_THEME="00-sunrise"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx terminalapp mercurial sublime mercurial rvm ruby rails)
-
+plugins=(git osx mercurial sublime)
+ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -66,11 +66,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # else
 #   export EDITOR='mvim'
 # fi
-
-export GIT_EDITOR="subl -n -w"
-export HGEDITOR="subl -n -w"
-export VISUAL=subl
-export EDITOR="subl -n -w"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -91,9 +86,12 @@ alias d='cd ~/Desktop'
 alias o='open .'
 alias ll='ls -la'
 alias s='cd ~/Sites'
-alias ss='subl .'
+alias ss='code .'
 alias n="afplay -v 2 /System/Library/Sounds/Blow.aiff"
 alias hgd="hg status --rev . --rev tip"
+alias git-prune-local='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -d'
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias gmf="go feature ; git pull ; go - ; git merge feature"
 
 # %{$Y%}‹
 function hg_prompt_info {
@@ -106,9 +104,26 @@ function hg_prompt_info {
 PROMPT='%{$KK%}------------------------------------------------------------%{$reset_color%}
 %B%0~ $(custom_git_prompt)$(hg_prompt_info)%B» %{$RESET%}'
 
-export NVM_DIR="~/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+alias loadnvm=". $NVM_DIR/nvm.sh"
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# export PATH="$PATH:$HOME/.rvm/bin"
+
+export HGEDITOR="code -n -w"
+export VISUAL=code
+export EDITOR='code -w'
+export GIT_EDITOR='code -w'
+export PATH=$PATH:$HOME/bin
+
+export ORACLE_HOME=/opt/oracle/instantclient_12_2
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
+export LD_LIBRARY_PATH=$ORACLE_HOME
+export PATH=$ORACLE_HOME:$PATH
+
+
+
+
