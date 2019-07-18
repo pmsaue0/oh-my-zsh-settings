@@ -48,11 +48,34 @@ prompt = ~/bin/hg-prompt/prompt.py
     st = status -s
     co = checkout
     cob = checkout -b
+
     # list branches sorted by last modified
     b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 
     # list aliases
     la = "!git config -l | grep alias | cut -c 7-"
+	dad = !curl https://icanhazdadjoke.com/ && git add
+[user]
+	name = Phillip Sauerbeck
+	email = Phillip.Sauerbeck@spendwellhealth.com
+[core]
+	editor = code --wait
+	excludesfile = /Users/r620187/.gitignore_global
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[merge "ours"]
+	driver = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[commit]
+	template = /Users/r620187/.stCommitMsg
+
 ```
 
 ## zsh settings and terminal styles
