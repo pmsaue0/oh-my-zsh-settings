@@ -91,7 +91,23 @@ alias n="afplay -v 2 /System/Library/Sounds/Blow.aiff"
 alias hgd="hg status --rev . --rev tip"
 alias git-prune-local='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -d'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias gmf="go feature ; git pull ; go - ; git merge feature"
+
+alias gs='git status '
+alias ga='git add .'
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
+alias got='git '
+alias get='git '
+
+alias gf="go feature"
+alias gm="go master"
+alias gmf="git pull origin feature"
+alias gmm="git pull origin master"
 
 # %{$Y%}‹
 function hg_prompt_info {
@@ -104,8 +120,11 @@ function hg_prompt_info {
 PROMPT='%{$KK%}------------------------------------------------------------%{$reset_color%}
 %B%0~ $(custom_git_prompt)$(hg_prompt_info)%B» %{$RESET%}'
 
+
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 alias loadnvm=". $NVM_DIR/nvm.sh"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -127,3 +146,4 @@ export PATH=$ORACLE_HOME:$PATH
 
 
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
