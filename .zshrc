@@ -100,6 +100,7 @@ alias gd='git diff'
 alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
+alias gg='git commit -am '
 
 alias got='git '
 alias get='git '
